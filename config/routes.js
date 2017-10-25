@@ -45,5 +45,11 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  '/doctor.html' : {
+    view: 'doctor'
+  }
 
+  '/paciente.html' : {
+    view: 'paciente'
+  }
 };
