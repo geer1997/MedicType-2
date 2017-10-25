@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.accent {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+main#index-main {
+  padding-top: 10%; 
+  background-image: url(../images/background.JPEG);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  z-index: 1;
+}

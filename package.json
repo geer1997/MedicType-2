@@ -1,9 +1,9 @@
 {
   "name": "MedicType",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a Sails application",
-  "keywords": [],
+  "keywords": ["JavaScript","MySQL"],
   "dependencies": {
     "ejs": "2.3.4",
     "grunt": "1.0.1",
@@ -33,6 +33,6 @@
     "type": "git",
     "url": "git://github.com/anonymous node/sails user/MedicType.git"
   },
-  "author": "anonymous node/sails user",
-  "license": ""
+  "author": "José Quevedo",
+  "license": "MIT"
 }
