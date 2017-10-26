@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title> MedicType </title>
 
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta charset="utf-8">
-
-
-    <!--
+<head>
+  <title> MedicType </title>
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <!--
         Stylesheets and Preprocessors
         ==============================
 
@@ -28,18 +26,30 @@
             + Import stylesheets from other directories
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
+  <!--STYLES-->
+  <link rel="stylesheet" href="/styles/importer.css">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/materialize.css">
+</head>
 
-    <!--STYLES-->
-    <link rel="stylesheet" href="/styles/importer.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/materialize.css">
-  </head>
-
-  <body>
-    <%- body %>
-
-
-
+<body>
+  <header>
+    <nav class=" blue darken-1">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo accent center">MedicType</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/doctor">Doctor</a></li>
+          <li><a href="/paciente">Paciente</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="/doctor">Doctor</a></li>
+          <li><a href="/paciente">Paciente</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <%- body %>
     <!--
         Client-side Templates
         ========================
@@ -60,12 +70,9 @@
             + Internationalize your client-side templates using a server-side
               stringfile before they're served.
     -->
-
     <!--TEMPLATES-->
     
     <!--TEMPLATES END-->
-
-
     <!--
 
       Client-side Javascript
@@ -88,13 +95,10 @@
           + Use a different preprocessor, like TypeScript
 
     -->
-
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/js/jquery-3.2.1.js"></script>
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/materialize.js"></script>
-    <script src="/js/materialize.min.js"></script>
-    <!--SCRIPTS END-->
-  </body>
+    <script src="/js/dependencies/jquery-3.2.1.js"></script>
+    <script src="/js/dependencies/materialize.js"></script>
+</body>
+
 </html>

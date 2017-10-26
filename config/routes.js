@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,11 +45,15 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  '/doctor.html' : {
+  'GET /doctor' : {
     view: 'doctor'
-  }
+  },
 
-  '/paciente.html' : {
+  'GET /paciente' : {
     view: 'paciente'
+  },
+
+  'GET /registro' : {
+    view: 'registro'
   }
 };
