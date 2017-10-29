@@ -27,3 +27,21 @@ main#index-main {
   background-size: 100% auto;
   z-index: 1;
 }
+div#header-doctor {
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/background.JPEG);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  z-index: 1;
+  display: flex;  
+}
+div#header-registrar {
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/background.JPEG);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  z-index: 1;
+  display: flex;  
+}
