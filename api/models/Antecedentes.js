@@ -6,15 +6,18 @@
  */
 
 module.exports = {
-	connection: 'connection',
-  	tableName: 'Antecedentes',
-  	attributes: {
-  		Antecedentes: {
-  			type: 'string'
-  		},
-  		Paciente: {
-  			model: 'paciente'
-  		}
-  	}
+  connection: 'connection',
+  tableName: 'Antecedentes',
+  attributes: {
+    Antecedentes: {
+      type: 'string'
+    },
+    Paciente: {
+      model: 'paciente'
+    }
+  },
+  migrate: 'safe',
+  autoPK: false,
+  autoCreatedAt: false,
+  autoUpdatedAt: false
 };
-

@@ -6,15 +6,18 @@
  */
 
 module.exports = {
-	connection: 'connection',
-  	tableName: 'Componentes_Medicamento',
- 	 attributes: {
-	  	Nombre : {
-	  		type:'string'
-	  	},
-	  	Medicamento: {
-	  		model: 'medicamento'
-	  	}
-	}
+  connection: 'connection',
+  tableName: 'Componentes_Medicamento',
+  attributes: {
+    Nombre: {
+      type: 'string'
+    },
+    Medicamento: {
+      model: 'medicamento'
+    }
+  },
+  migrate: 'safe',
+  autoPK: false,
+  autoCreatedAt: false,
+  autoUpdatedAt: false
 };
-

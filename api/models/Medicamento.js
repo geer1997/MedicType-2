@@ -6,20 +6,27 @@
  */
 
 module.exports = {
-	connection: 'connection',
-  	tableName: 'Medicamento',
-	attributes: {
-	  	id:{
-			type: 'int'
-	  	},
-	  	Nombre:{
-	  		type: 'string'
-	  		required: true;
-	  	},
-	  	Consulta: {
-	  		collection: 'consulta',
-	      	via: 'Recipe'
-	  	}
-	}
+  connection: 'connection',
+  tableName: 'Medicamento',
+  attributes: {
+    id: {
+      type: 'int',
+      primaryKey: true,
+      unique: true,
+      autoIncrement: true,
+      required: true
+    },
+    Nombre: {
+      type: 'string',
+      required: true
+    },
+    Consulta: {
+      collection: 'consulta',
+      via: 'Recipe'
+    }
+  },
+  migrate: 'safe',
+  autoPK: false,
+  autoCreatedAt: false,
+  autoUpdatedAt: false
 };
-

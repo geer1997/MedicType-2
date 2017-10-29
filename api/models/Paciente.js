@@ -11,6 +11,10 @@ module.exports = {
   attributes: {
     id: {
       type: 'integer',
+      primaryKey: true,
+      unique: true,
+      autoIncrement: true,
+      required: true
     },
     Nombre: {
       type: 'string'
@@ -20,6 +24,7 @@ module.exports = {
     },
     Cedula: {
       type: 'integer',
+      unique: true
     },
     FNacimiento: {
       type: 'string'
@@ -42,8 +47,12 @@ module.exports = {
     Ciudad: {
       type: 'string'
     },
-    nombreCompleto: function () {
-    	return this.Nombre+' 'this.Apellido;
-    };
-  }
+    nombreCompleto: function() {
+      return this.Nombre + ' ' + this.Apellido;
+    }
+  },
+  migrate: 'safe',
+  autoPK: false,
+  autoCreatedAt: false,
+  autoUpdatedAt: false
 };

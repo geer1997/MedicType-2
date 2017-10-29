@@ -6,14 +6,18 @@
  */
 
 module.exports = {
-	connection: 'connection',
-  	tableName: 'Causas_Patologia',
-  		attributes: {
-	    causa: {
-	      type: 'string'
-	    },
-	    Patologia: {
-	      model: 'Patologia'
-	    }
-	}
+  connection: 'connection',
+  tableName: 'Causas_Patologia',
+  attributes: {
+    causa: {
+      type: 'string'
+    },
+    Patologia: {
+      model: 'Patologia'
+    }
+  },
+  migrate: 'safe',
+  autoPK: false,
+  autoCreatedAt: false,
+  autoUpdatedAt: false
 };

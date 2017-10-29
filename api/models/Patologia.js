@@ -6,16 +6,23 @@
  */
 
 module.exports = {
-	connection: 'connection',
-  	tableName: 'Patologia',
-	attributes: {
-	  	id:{
-	  		type: 'integer'
-	  	},
-	  	Nombre:{
-	  		type: 'string'
-	  		required: true;
-	  	}
-	}
+  connection: 'connection',
+  tableName: 'Patologia',
+  attributes: {
+		id: {
+		  type: 'integer',
+		  primaryKey: true,
+		  unique: true,
+		  autoIncrement: true,
+		  required: true
+		},
+		Nombre: {
+		  type: 'string',
+		  required: true
+		}
+  },
+  migrate: 'safe',
+  autoPK: false,
+  autoCreatedAt: false,
+  autoUpdatedAt: false
 };
-
