@@ -15,8 +15,19 @@ module.exports = {
       if (err) {
         return res.badRequest({error: err});
       } else {
-        res.view('/pacientes/registrado', {data:createdData});
+        res.view('login-paciente', {data:createdData});
       }
+    });
+  },
+  Login: function (req,res) {
+    res.view('login-paciente');
+  },
+  Home: function (req,res) {
+    var key = req.body.cedula;
+    Paciente.findOne({cedula:key}).exec(function(err, data){
+      if (err) {return res.badRequest({error: err})}
+      res.view('paciente-home', {paciente: data});  
+
     });
   }
 };

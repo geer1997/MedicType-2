@@ -1,12 +1,25 @@
 <main class="grey lighten-5">
+  
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large red">
       <i class="large material-icons">add</i>
     </a>
     <ul>
-      <li><a class="btn-floating red" href="/pacientes/registro"><i class="material-icons">fiber_new</i></a></li>
-      <li><a href="#modalBuscar" id="btnBuscar" class="btn-floating yellow darken-1 modal-trigger"><i class="material-icons">search</i></a></li>
-      <li><a href="/doctor/panel" id="btnAtender" class="btn-floating blue darken-1"><i class="material-icons">done</i></a></li>
+      <li>
+        <a class="btn-floating red" href="/registro">
+          <i class="material-icons">fiber_new</i>
+        </a>
+      </li>
+      <li>
+        <a href="#modalBuscar" id="btnBuscar" class="btn-floating yellow darken-1 modal-trigger">
+          <i class="material-icons">search</i>
+        </a>
+      </li>
+      <li>
+        <a href="/doctor/panel" id="btnAtender" class="btn-floating blue darken-1">
+          <i class="material-icons">done</i>
+        </a>
+      </li>
     </ul>
   </div>
   
@@ -15,9 +28,12 @@
       <h2 class="white-text"><span class="center">Consulta del Dr. <span id="doctor accent">doctor.Apellido</span></span></h2>
     </div>
   </div>
+  
   <div class="container">
     <div class="row">
-      
+      <div class="col m12">
+        <h3 class="center">Bienvenido</h3>
+      </div>    
     </div>
   </div>
   <div id="modalBuscar" class="modal">
@@ -32,9 +48,9 @@
         </div>
       </form>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Buscar</a>
-    </div>
+    <form class="modal-footer" method="POST" action="">
+      <input class="modal-action modal-close waves-effect waves-green btn-flat " type="submit" value="Buscar"/>
+    </form>
   </div>
 
 

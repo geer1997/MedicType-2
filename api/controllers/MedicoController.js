@@ -11,8 +11,8 @@ module.exports = {
 	},
 	Home: function (req, res) {
 		Medico.findOne({cedula:req.body.cedula}).exec(function (err, doc) {
-			if (err) {res.send(500,{error:'DB_Error'});}
-			res.view('doctor', {doc:doc})
+			if (err) {return res.badRequest({error: err})}
+			res.view('doctor', {medico:doc})
 		});
 	},
 	Consulta: function(req, res) {
