@@ -4,7 +4,7 @@
       <h2 class="white-text accent">Registrar Nuevo Paciente</h2>
     </div>
   </div>
-  <form method="POST" action="/Paciente/create" class="container">
+  <form method="POST" action="/paciente/crear" class="container">
     <div class="row card-panel">
       <div class="col m6 s12">
         <div class="row">
@@ -77,6 +77,12 @@
           <div class="col s12 input-field">
             <input type="text" class="datepicker" name="FNacimiento" />
             <label for="FNacimiento">Fecha de Nacimiento</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 input-field">
+            <input placeholder="Femenino/masculino" name="Sexo" type="text" class="validate">
+            <label for="Sexo">Sexo</label>
           </div>
         </div>
       </div>
