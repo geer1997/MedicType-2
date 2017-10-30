@@ -4,85 +4,93 @@
       <h2 class="white-text accent">Registrar Nuevo Paciente</h2>
     </div>
   </div>
+<<<<<<< HEAD
   <form method="POST" action="/Paciente/create" class="container">
+=======
+  <form method="POST" action="/paciente/create" class="container">
+>>>>>>> a949966a1724a4f8d9315748fca72afdaf3ab1ce
     <div class="row card-panel">
       <div class="col m6 s12">
         <div class="row">
           <div class="col s12 input-field">
-            <input placeholder="Pedro" id="namePaciente" type="text" class="validate">
-            <label for="namePaciente">Nombre Paciente</label>
+            <input placeholder="Pedro" name="Nombre" type="text" class="validate">
+            <label for="Nombre">Nombre Paciente</label>
           </div>
         </div>
         <div class="row">
           <div class="col s12 input-field">
-            <input placeholder="Perez" id="apellidoPaciente" type="text" class="validate">
-            <label for="apellidoPaciente">Apellido Paciente</label>
+            <input placeholder="Perez" name="Apellido" type="text" class="validate">
+            <label for="Apellido">Apellido Paciente</label>
           </div>
         </div>
         <div class="row">
           <div class="col s12 input-field">
-            <input placeholder="12345678" id="cedulaPaciente" type="text" class="validate">
-            <label for="cedulaPaciente">Cédula</label>
+            <input placeholder="12345678" name="Cedula" type="text" class="validate">
+            <label for="Cedula">Cédula</label>
           </div>
         </div>
         <div class="row">
           <div class="col s12 input-field">
-            <input placeholder="AB ORH+" id="tipoSangre" type="text" class="validate">
-            <label for="tipoSangre">Tipo de Sangre</label>
+            <input placeholder="AB ORH+" name="TSangre" type="text" class="validate">
+            <label for="TSangre">Tipo de Sangre</label>
           </div>
         </div>
+
+       <!-- 
         <div class="row">
           <div class="col s12 input-field">
-            <textarea id="alergiasP" class="materialize-textarea"></textarea>
+            <textarea name="alergiasP" class="materialize-textarea"></textarea>
             <label for="alergiaP">Alergia</label>
           </div>
         </div>
+      
+
         <div class="row">
           <div class="col s12 input-field">
             <textarea id="antecentesF" class="materialize-textarea"></textarea>
             <label for="antecentesF">Antecedentes Familiares</label>
           </div>
-        </div>
+        </div>-->
       </div>
       <div class="col m6 s12">
         <div class="row">
           <div class="col s12 input-field">
-            <input placeholder="Apto. XX Edif. xxxx / Casa N° x" id="namePaciente" type="text" class="validate">
-            <label for="namePaciente">N° de Apto / Casa</label>
+            <input placeholder="Apto. XX Edif. xxxx / Casa N° x" name="NAptoCasa" type="text" class="validate" />
+            <label for="NAptoCasa">N° de Apto / Casa</label>
           </div>
         </div>
         <div class="row">
           <div class="col s12 input-field">
-            <input placeholder="Urb. XXXXXX" id="apellidoPaciente" type="text" class="validate">
-            <label for="apellidoPaciente">Urbanización</label>
+            <input placeholder="Urb. XXXXXX" name="Urbanizacion" type="text" class="validate" />
+            <label for="Urbanizacion">Urbanización</label>
           </div>
         </div>
         <div class="row">
           <div class="col s12 input-field">
-            <input placeholder="Calle xx / Av xx" id="cedulaPaciente" type="text" class="validate">
-            <label for="cedulaPaciente">Calle</label>
+            <input placeholder="Calle xx / Av xx" name="Calle" type="text" class="validate" />
+            <label for="Calle">Calle</label>
           </div>
         </div>
         <div class="row">
           <div class="col s12 input-field">
-            <input placeholder="Municipio Sucre / Caracas" id="tipoSangre" type="text" class="validate">
-            <label for="tipoSangre">Municipio / Ciudad</label>
+            <input placeholder="Municipio Sucre / Caracas" name="Ciudad" type="text" class="validate" />
+            <label for="Ciudad">Municipio / Ciudad</label>
           </div>
         </div>
         <div class="row">
           <div class="col s12 input-field">
-            <input type="text" class="datepicker" id="fechaNacimiento">
-            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input type="text" class="datepicker" name="FNacimiento" />
+            <label for="FNacimiento">Fecha de Nacimiento</label>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col s12 center">
-          <button class="waves-effect waves-light btn blue darken-1" type="summit">Registrar</button>
+          <input class="waves-effect waves-light btn blue darken-1" type="submit" value "Registrar" />
         </div>
       </div>
     </div>
-  </div>
+  </form>
 </main>
 <footer class="blue darken-1 page-footer">
   <div class="row">
