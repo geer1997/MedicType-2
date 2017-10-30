@@ -56,5 +56,6 @@ module.exports.routes = {
   'GET /pacientes/registro' : {
     view: 'pacientes/registro'
   },  
-  'GET /doctor/panel' : 'MedicoController.Atender'
+  'GET /doctor/panel' : 'MedicoController.Atender',
+  'POST /Paciente/crear' : 'PacienteController.crear'
 };

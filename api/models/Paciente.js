@@ -14,7 +14,7 @@ module.exports = {
       primaryKey: true,
       unique: true,
       autoIncrement: true,
-      required: true
+      required: false
     },
     Nombre: {
       type: 'string'
@@ -49,7 +49,7 @@ module.exports = {
     }
   },
   migrate: 'safe',
-  autoPK: false,
+  autoPK: true,
   autoCreatedAt: false,
   autoUpdatedAt: false
 };
