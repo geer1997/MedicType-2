@@ -29,7 +29,7 @@ module.exports = {
     FNacimiento: {
       type: 'string'
     },
-    TipoSangre: {
+    TSangre: {
       type: 'string'
     },
     Sexo: {

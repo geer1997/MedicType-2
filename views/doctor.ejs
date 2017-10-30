@@ -1,24 +1,13 @@
 <main class="grey lighten-5">
-  <ul id="slide-out" class="side-nav">
-    <li>
-      <div class="user-view">
-        <div class="background">
-          <img src="../images/background.JPEG">
-        </div>
-        <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-        <a href="#!name"><span class="white-text name">doctor.nombreCompleto</span></a>
-      </div>
-    </li>
-    <li><a href="/registro"><i class="material-icons">fiber_new</i>Nuevo Paciente</a></li>
-    <li><div class="divider"></div></li>
-    <li><a href="#modalBuscar" id="btnBuscar" class="modal-trigger"><i class="material-icons">search</i>Buscar Paciente</a></li>
-    <li><div class="divider"></div></li>
-    <li><a href="#" id="btnA"><i class="material-icons">done</i>Atender</a></li>
-  </ul>
   <div class="fixed-action-btn">
-    <a href="#" data-activates="slide-out" class="btn-floating btn-large waves-effect waves-light red button-collapse">
+    <a class="btn-floating btn-large red">
       <i class="large material-icons">add</i>
     </a>
+    <ul>
+      <li><a class="btn-floating red" href="/paciente/registro"><i class="material-icons">fiber_new</i></a></li>
+      <li><a href="#modalBuscar" id="btnBuscar" class="btn-floating yellow darken-1 modal-trigger"><i class="material-icons">search</i></a></li>
+      <li><a href="/doctor/panel" id="btnAtender" class="btn-floating blue darken-1"><i class="material-icons">done</i></a></li>
+    </ul>
   </div>
   
   <div class="row">
@@ -28,136 +17,9 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col s12">
-        <div class="row">
-          <div class="card-panel">
-            <div class="row">
-              <h4 class="center">Datos del Paciente</h4>
-            </div>
-            <div class="row">
-              <div class="col m6">
-                <p>Nombre: <span id="nombrePaciente">paciente.nombre paciente.apellido</span></p>
-              </div>
-              <div class="col m6">
-                <p>Edad: <span id="nacimientoPaciente">paciente.edad</span> <span id="edad"></span></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col m6">
-                <p>Tipo de Sangre: <span id="sangrePaciente">paciente.tipodeSangre</span></p>
-              </div>
-              <div class="col m6">
-                <p>Direccion: <span id="direccionPaciente">paciente.direccion</span> <span id="edad"></span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card-panel">
-            <div class="row">
-              <h4 class="center">Condición actual del Paciente</h4>
-            </div>
-            <form class="row">
-              <div class="col m6 input-field">
-                <input placeholder="120" id="pesoPaciente" type="text" class="validate">
-                <label for="pesoPaciente">Peso (Kg)</label>
-              </div>
-              <div class="col m6 input-field">
-                <input placeholder="1.80" id="tallaPaciente" type="text" class="validate">
-                <label for="tallaPaciente">Talla (m)</label>
-              </div>
-            </form>
-            <form class="row">
-              <div class="col m6 input-field">
-                <input placeholder="120" id="tensionPaciente" type="text" class="validate">
-                <label for="tensionPaciente">Tension Arterial</label>
-              </div>
-              <div class="col m6 input-field">
-                <input placeholder="37.5" id="temperaturaPaciente" type="text" class="validate">
-                <label for="temperaturaPaciente">Temperatura(°C)</label>
-              </div>
-            </form>
-            <form class="row">
-              <div class="col m6 input-field">
-                <input placeholder="13" id="fRespiratoriaPaciente" type="text" class="validate">
-                <label for="fRespiratoriaPaciente">Frecuencia Respiratoria(N por min)</label>
-              </div>
-              <div class="col m6 input-field">
-                <input placeholder="120/80" id="fcardiacaPaciente" type="text" class="validate">
-                <label for="fcardiacaPaciente">Frecuencia Cardiaca</label>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card-panel">
-            <div class="row">
-              <h4 class="center">Diagnostico</h4>
-            </div>
-            <form class="row">
-              <div class="col m6 input-field">
-                <select id="listaPatologias">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-                <label>Patologia Diagnosticada</label>
-              </div>
-              <div class="col m6 input-field">
-                <input placeholder="Cefalea" id="newPatologia" type="text" class="validate">
-                <label for="newPatologia">Otra Patologia</label>
-              </div>
-            </form>
-            <form class="row">
-              <div class="col m6 input-field">
-                <select id="listaPatologias" multiple>
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-                <label>Medicamento Diagnosticada</label>
-              </div>
-              <div class="col m6 input-field">
-                <input placeholder="Atamel 500mg" id="newMedicamento" type="text" class="validate">
-                <label for="newMedicamento">Nuevo Medicamento</label>
-              </div>
-            </form>
-            <form class="row">
-              <div class="col m12 input-field">
-                <textarea id="indicaciones" class="materialize-textarea"></textarea>
-                <label for="indicaciones">Indicaciones</label>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card-panel">
-            <div class="row">
-              <h4 class="center">Observaciones</h4>
-            </div>
-            <form class="row">
-              <div class="col m12 input-field">
-                <textarea id="observaciones" class="materialize-textarea"></textarea>
-                <label for="observaciones">Observaciones Adicionales</label>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card-panel">
-            <div class="row center">
-              <a class="waves-effect waves-light btn blue darken-1" id="btnTerminar">Terminar Consulta</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
-
-
-
   <div id="modalBuscar" class="modal">
     <div class="modal-content">
       <div class="row">
