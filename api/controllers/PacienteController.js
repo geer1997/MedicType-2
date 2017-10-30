@@ -6,6 +6,8 @@
  */
 
 module.exports = {
-	
+	registrar: function (req, res) {
+		res.view('/pacientes/registro');
+	}
 };
 

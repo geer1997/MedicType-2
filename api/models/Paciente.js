@@ -46,9 +46,6 @@ module.exports = {
     },
     Ciudad: {
       type: 'string'
-    },
-    nombreCompleto: function() {
-      return this.Nombre + ' ' + this.Apellido;
     }
   },
   migrate: 'safe',

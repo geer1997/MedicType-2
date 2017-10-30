@@ -45,16 +45,16 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  'GET /doctor' : {
-    view: 'doctor'
+  'GET /doctor/home' : {
+    view: 'doctor/home'
   },
 
-  'GET /paciente' : {
-    view: 'paciente'
+  'GET /pacientes/home' : {
+    view: 'pacientes/home'
   },
-  'POST /paciente' : 'PacienteController.registrar',
-  'GET /paciente/registro' : {
-    view: 'registro'
+  'POST /pacientes/registro' : 'PacienteController.registrar',
+  'GET /pacientes/registro' : {
+    view: 'pacientes/registro'
   },  
   'GET /doctor/panel' : 'MedicoController.Atender'
 };

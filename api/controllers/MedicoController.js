@@ -6,8 +6,11 @@
  */
 
 module.exports = {
-	Atender: function (req, res) {
-		res.view('doctor/panel',res.json());
+	inciar: function(req,res) {
+		res.view('/doctor/home');
 	},
+	Atender: function (req, res) {
+		res.view('/doctor/panel',res.json());
+	}
 };
 
