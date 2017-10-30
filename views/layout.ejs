@@ -6,32 +6,11 @@
   <!-- Viewport mobile tag for sensible mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta charset="utf-8">
-  <!--
-        Stylesheets and Preprocessors
-        ==============================
-
-        You can always bring in CSS files manually with `<link>` tags, or asynchronously
-        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
-        of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-        By default, stylesheets from your `assets/styles` folder are included
-        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
-        are supported. In production, your styles will be minified and concatenated into
-        a single file.
-
-        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Change the order of your CSS files
-            + Import stylesheets from other directories
-            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
-    -->
   <!--STYLES-->
   <link rel="stylesheet" href="/styles/importer.css">
   <link rel="stylesheet" href="/styles/main.css">
   <link rel="stylesheet" href="/styles/materialize.css">
 </head>
-
 <body>
   <header>
     <nav class=" blue darken-1">
@@ -42,13 +21,13 @@
           <li><a href="/">Home</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/doctor/home">Doctor</a></li>
-          <li><a href="/pacientes/home">Paciente</a></li>
+          <li><a href="/login">Doctor</a></li>
+          <li><a href="/paciente-home">Paciente</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="/">Home</a></li>
-          <li><a href="/doctor/home">Doctor</a></li>
-          <li><a href="/pacientes/home">Paciente</a></li>
+          <li><a href="/login">Doctor</a></li>
+          <li><a href="/paciente-home">Paciente</a></li>
         </ul>
       </div>
     </nav>
