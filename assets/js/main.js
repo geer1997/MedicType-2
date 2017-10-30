@@ -9,4 +9,5 @@
       closeOnSelect: false // Close upon selecting a date,
     });
     $('.modal').modal();
+    $(".button-collapse").sideNav();
   });

@@ -14,7 +14,7 @@ module.exports = {
       primaryKey: true,
       unique: true,
       autoIncrement: true,
-      required: true
+      required: false
     },
     Nombre: {
       type: 'string'
@@ -29,7 +29,7 @@ module.exports = {
     FNacimiento: {
       type: 'string'
     },
-    TipoSangre: {
+    TSangre: {
       type: 'string'
     },
     Sexo: {
@@ -46,13 +46,10 @@ module.exports = {
     },
     Ciudad: {
       type: 'string'
-    },
-    nombreCompleto: function() {
-      return this.Nombre + ' ' + this.Apellido;
     }
   },
   migrate: 'safe',
-  autoPK: false,
+  autoPK: true,
   autoCreatedAt: false,
   autoUpdatedAt: false
 };

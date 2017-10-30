@@ -1,4 +1,14 @@
 <main class="grey lighten-5">
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">add</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">save</i></a></li>
+      <li><a class="btn-floating blue darken-1"><i class="material-icons">arrow_back</i></a></li>
+    </ul>
+  </div>
+  
   <div class="row">
     <div class="col m12 valign-wrapper" id="header-doctor">
       <h2 class="white-text"><span class="center">Consulta del Dr. <span id="doctor accent">doctor.Apellido</span></span></h2>
@@ -6,18 +16,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col m3 s12" id="accionesMedico">
-        <div class="card-panel center">
-          <a class="waves-effect waves-light btn blue darken-1" id="btnRegistro" href="/registro">Nuevo</a>
-          <br>
-          <br>
-          <a class="waves-effect waves-light btn blue darken-1 modal-trigger" href="#modalBuscar" id="btnBuscar">Buscar</a>
-          <br>
-          <br>
-          <a class="waves-effect waves-light btn blue darken-1" id="btnAtender">Atender</a>
-        </div>
-      </div>
-      <div class="col m9 s12">
+      <div class="col s12">
         <div class="row">
           <div class="card-panel">
             <div class="row">
@@ -150,7 +149,7 @@
   <div id="modalBuscar" class="modal">
     <div class="modal-content">
       <div class="row">
-      	<h4 class="center">Buscar Paciente por Numero de Cedula</h4>
+        <h4 class="center">Buscar Paciente por Numero de Cedula</h4>
       </div>
       <form class="row">
         <div class="col m12 input-field">
