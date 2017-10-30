@@ -9,13 +9,6 @@ module.exports = {
   connection: 'connection',
   tableName: 'Paciente',
   attributes: {
-    id: {
-      type: 'integer',
-      primaryKey: true,
-      unique: true,
-      autoIncrement: true,
-      required: false
-    },
     Nombre: {
       type: 'string'
     },
