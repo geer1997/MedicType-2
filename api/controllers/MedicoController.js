@@ -6,6 +6,11 @@
  */
 
 module.exports = {
-	
+	inciar: function(req,res) {
+		res.view('doctor/home');
+	},
+	Atender: function (req, res) {
+		res.view('doctor/panel');
+	}
 };
 
