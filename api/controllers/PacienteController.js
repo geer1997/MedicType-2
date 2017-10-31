@@ -6,42 +6,67 @@
  */
 
 module.exports = {
-  registrar: function(req, res) {
-    res.view('/pacientes/registro');
+  Registrar: function(req, res) {
+    res.view('registro');
   },
-  crear: function(req, res, next, callback) {
+
+  Home: function(req, res) {
+    res.view('paciente-home');
+  },
+  
+
+  Crear: function(req, res, next, callback) {
     var params = req.body;
     Paciente.create(params, function(err, createdData) {
       if (err) {
         return res.badRequest({error: err});
       } else {
-        res.view('login-paciente', {data:createdData});
+        res.view('registrado', {Paciente:createdData});
       }
     });
   },
-  Login: function (req,res) {
-    res.view('login-paciente');
-  },
-  Home: function (req,res) {
-    var key = req.body.cedula;
-    Paciente.findOne({cedula:key}).exec(function(err, data){
-      if (err) {return res.badRequest({error: err})}
-      res.view('paciente-home', {paciente: data});  
 
+  BuscarPorCedula: function(req, res, next, callback) {
+    var ced = req.body;
+    Paciente.findOne(ced, function(err, createdData){
+      if (err) {
+        return res.badRequest({error: err});
+      } else {
+        res.view('registrado', {Paciente:createdData});
+      }
     });
   },
-  Buscar: function (req,res) {
-    var key = req.body.cedula;
-    Paciente.findOne({cedula:key}).exec(function (err, data) {
-      if(err){return res.badRequest({error:err})}
-      res.view('doctor',{ paciente:data });
+
+
+  Modificar: function(req, res) {
+    Paciente.findOne({id:req.params.id}).exec(function (err, paciente) {
+      if (err) {
+        res.send(500,{error:'DB_Error'});
+      }
+      res.view('modificar-paciente', {Paciente:paciente});
     });
   },
-  cambiar: function (req,res) {
-    var key = req.body.cedula;
-    Paciente.update({cedula:key},{registro:req.body}).exec(function (err, update) {
-      if (err) { return res.badRequest({error:err}) }
-      res.json({data:update});
+
+  Eliminar: function(req, res) {
+    Paciente.destroy({id:req.params.id}).exec(function (err) {
+      if (err) {
+        res.send(500,{error:'DB_Error'});
+      }
+      res.redirect('/paciente-home');
     });
-  }
+    return false;
+  },
+
+  Update: function(req, res) {
+    Paciente.update({id:req.params.id}, {Nombre:req.body.Nombre, Apellido:req.body.Apellido, Sexo:req.body.Sexo, TSangre:req.body.TSangre, FNacimiento:req.body.FNacimiento, NAptoCasa:req.body.NAptoCasa, Calle:req.body.Calle, Ciudad:req.body.Ciudad }, function(err, createdData){
+      if (err) {
+        console.log("nonononononn");
+        return res.badRequest({error: err});
+      } else {
+        console.log(createdData);
+        res.view('registrado', {Paciente:createdData[0]});
+      }
+    });
+    }
+  
 };

@@ -6,7 +6,7 @@
     </a>
     <ul>
       <li>
-        <a class="btn-floating red" href="/registro">
+        <a class="btn-floating red" href="/paciente/registrar">
           <i class="material-icons">fiber_new</i>
         </a>
       </li>
@@ -48,29 +48,24 @@
       </div>
     </div>
   </div>
-  <div id="modalBuscar" class="modal">
+
+  <form id="modalBuscar" class="modal" method="POST" action="/paciente/BuscarPorCedula">
     <div class="modal-content">
       <div class="row">
       	<h4 class="center">Buscar Paciente por Numero de Cedula</h4>
       </div>
-      <form class="row">
+      <div class="row" >
         <div class="col m12 input-field">
-          <input placeholder="12345678" id="buscarCedula" type="text" class="validate">
-          <label for="pesoPaciente">Cédula de Identidad</label>
+          <input placeholder="12345678" name="Cedula" id="Cedula" type="text" class="validate">
+          <label for="Cedula">Cédula de Identidad</label>
         </div>
-      </form>
+      </div>
     </div>
-    <form class="modal-footer" method="POST" action="Paciente/Buscar ">
-      <input class="modal-action modal-close waves-effect waves-green btn-flat " type="submit" value="Buscar" id="btnBuscar" />
-    </form>
-  </div>
+    <div class="modal-footer">
+      <button class="modal-action modal-close waves-effect waves-green btn-flat " type="submit" id="btnBuscar">Buscar</button>
+    </div>
+  </form>
 </main>
-<footer class="blue darken-1 page-footer">
-  <div class="row">
-    <div class="col s12">
-      <p class="center white-text"> © 2017 <span class="accent">MedicType Team.</span></p>
-    </div>
-  </div>
-</footer>
+
 <script>
 </script>
