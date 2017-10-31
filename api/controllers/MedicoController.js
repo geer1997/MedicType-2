@@ -6,11 +6,17 @@
  */
 
 module.exports = {
-	inciar: function(req,res) {
-		res.view('doctor/home');
+	Login: function(req, res) {
+		res.view('login-doctor');
 	},
-	Atender: function (req, res) {
-		res.view('doctor/panel');
+	Home: function (req, res) {
+		Medico.findOne({cedula:req.body.cedula}).exec(function (err, doc) {
+			if (err) {res.send(500,{error:'DB_Error'});}
+			res.view('doctor', {doc:doc})
+		});
+	},
+	Consulta: function(req, res) {
+
 	}
 };
 

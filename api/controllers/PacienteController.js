@@ -13,13 +13,9 @@ module.exports = {
     var params = req.body;
     Paciente.create(params, function(err, createdData) {
       if (err) {
-        return res.badRequest({
-          error: err
-        });
+        return res.badRequest({error: err});
       } else {
-        return res.json({
-          data: createdData
-        });
+        res.view('/pacientes/registrado', {data:createdData});
       }
     });
   }
