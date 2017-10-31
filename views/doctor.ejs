@@ -35,6 +35,18 @@
         <h3 class="center">Bienvenido</h3>
       </div>    
     </div>
+    <div class="row">
+      <div class="col m4 card-panel">
+        
+      </div>
+      <div class="col m4 card-panel"></div>
+      <div class="col m4 card-panel"></div>
+    </div>
+    <div class="row">
+      <div class="col m12">
+        <p class="center" id="paciente"><%= data.nombre %></p>
+      </div>
+    </div>
   </div>
   <div id="modalBuscar" class="modal">
     <div class="modal-content">
@@ -48,13 +60,10 @@
         </div>
       </form>
     </div>
-    <form class="modal-footer" method="POST" action="">
-      <input class="modal-action modal-close waves-effect waves-green btn-flat " type="submit" value="Buscar"/>
+    <form class="modal-footer" method="POST" action="Paciente/Buscar ">
+      <input class="modal-action modal-close waves-effect waves-green btn-flat " type="submit" value="Buscar" id="btnBuscar" />
     </form>
   </div>
-
-
-
 </main>
 <footer class="blue darken-1 page-footer">
   <div class="row">
@@ -63,3 +72,5 @@
     </div>
   </div>
 </footer>
+<script>
+</script>

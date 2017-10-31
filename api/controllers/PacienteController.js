@@ -29,5 +29,19 @@ module.exports = {
       res.view('paciente-home', {paciente: data});  
 
     });
+  },
+  Buscar: function (req,res) {
+    var key = req.body.cedula;
+    Paciente.findOne({cedula:key}).exec(function (err, data) {
+      if(err){return res.badRequest({error:err})}
+      res.view('doctor',{ paciente:data });
+    });
+  },
+  cambiar: function (req,res) {
+    var key = req.body.cedula;
+    Paciente.update({cedula:key},{registro:req.body}).exec(function (err, update) {
+      if (err) { return res.badRequest({error:err}) }
+      res.json({data:update});
+    });
   }
 };
