@@ -6,10 +6,10 @@
   <!-- Viewport mobile tag for sensible mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <!--STYLES-->
   <link rel="stylesheet" href="/styles/importer.css">
   <link rel="stylesheet" href="/styles/main.css">
-  <link rel="stylesheet" href="/styles/materialize.css">
 </head>
 <body>
   <header>
@@ -21,22 +21,22 @@
           <li><a href="/">Home</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/login">Doctor</a></li>
+          <li><a href="/medico-login">Doctor</a></li>
           <li><a href="/paciente-home">Paciente</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="/">Home</a></li>
-          <li><a href="/login">Doctor</a></li>
+          <li><a href="/medico-login">Doctor</a></li>
           <li><a href="/paciente-home">Paciente</a></li>
         </ul>
       </div>
-    </nav>
+    </nav> 
   </header>
   <%- body %>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/js/dependencies/jquery-3.2.1.js"></script>
-    <script src="/js/dependencies/materialize.js"></script>
     <script src="/js/main.js"></script>
 
     <footer class="blue darken-1 page-footer">

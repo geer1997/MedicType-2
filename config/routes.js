@@ -28,7 +28,7 @@ module.exports.routes = {
 
 
 
-  'GET /login': 'MedicoController.Login',
+  'GET /medico-login': 'MedicoController.Login',
   'GET /paciente-home': 'PacienteController.Home',
 
   'GET /paciente/registrar': 'PacienteController.Registrar',
@@ -42,8 +42,7 @@ module.exports.routes = {
 
   'GET /doctor/panel': 'MedicoController.Consulta',
   'POST /Consulta': 'MedicoController.Home',
-
-  //'GET /medico/registrar': 'MedicoController.Registrar',
+  'GET /medico/registrar': {view: 'registrar-medico'}
   //'POST /Consulta' : 'MedicoController.Home',,
   //'GET /doctor/panel' : 'MedicoController.Atender',
 
