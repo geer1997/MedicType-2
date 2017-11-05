@@ -6,6 +6,11 @@
  */
 
 module.exports = {
-	
+	iniciar: function (req,res) {
+		res.view('completar-historia');
+	},
+	registrar: function (req,res) {
+		// body...
+	}	
 };
 

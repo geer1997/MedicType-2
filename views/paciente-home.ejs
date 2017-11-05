@@ -11,101 +11,17 @@
         <div class="row">
           <h4 class="center">Buscar Paciente</h4>
         </div>
-        <form class="row">
+        <form method="POST" action="/paciente/BuscarPorCedula" class="row"> 
           <div class="col m12 center input-field">
-            <input placeholder="12345678" id="buscarCedula" type="text" class="validate">
-            <label for="buscarCedula">Cedula de Identidad</label>
-            <a class="waves-effect waves-light btn blue darken-1" id="btnBuscar">Buscar</a>
+            <input placeholder="12345678" name="Cedula" type="text" class="validate">
+            <label for="Cedula">Cedula de Identidad</label>
+            <button class="waves-effect waves-light btn blue darken-1" type="submit">Buscar</button>
           </div>
-      </form>
+        </form>
       </div>
       <div class="col m3"></div>
     </div>
   </div>
-  <div class="container hide">
-    <div class="row card-panel">
-      <form class="col m6 s12">
-        <div class="row">
-          <div class="col s12 input-field">
-            <input placeholder="Pedro" id="namePaciente" type="text" class="validate">
-            <label for="namePaciente">Nombre Paciente</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 input-field">
-            <input placeholder="Perez" id="apellidoPaciente" type="text" class="validate">
-            <label for="apellidoPaciente">Apellido Paciente</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 input-field">
-            <input placeholder="12345678" id="cedulaPaciente" type="text" class="validate">
-            <label for="cedulaPaciente">Cédula</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 input-field">
-            <input placeholder="AB ORH+" id="tipoSangre" type="text" class="validate">
-            <label for="tipoSangre">Tipo de Sangre</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 input-field">
-            <textarea id="alergiasP" class="materialize-textarea"></textarea>
-            <label for="alergiaP">Alergia</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 input-field">
-            <textarea id="antecentesF" class="materialize-textarea"></textarea>
-            <label for="antecentesF">Antecedentes Familiares</label>
-          </div>
-        </div>
-      </form>
-      <form class="col m6 s12">
-        <div class="row">
-          <div class="col s12 input-field">
-            <input placeholder="Apto. XX Edif. xxxx / Casa N° x" id="namePaciente" type="text" class="validate">
-            <label for="namePaciente">N° de Apto / Casa</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 input-field">
-            <input placeholder="Urb. XXXXXX" id="apellidoPaciente" type="text" class="validate">
-            <label for="apellidoPaciente">Urbanización</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 input-field">
-            <input placeholder="Calle xx / Av xx" id="cedulaPaciente" type="text" class="validate">
-            <label for="cedulaPaciente">Calle</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 input-field">
-            <input placeholder="Municipio Sucre / Caracas" id="tipoSangre" type="text" class="validate">
-            <label for="tipoSangre">Municipio / Ciudad</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <label for="fechaNacimiento">Fecha de Nacimiento</label>
-            <input type="text" class="datepicker" id="fechaNacimiento">
-          </div>
-        </div>
-      </form>
-      <div class="row">
-        <div class="col s12 center">
-          <a class="waves-effect waves-light btn blue darken-1">Cambiar Datos</a>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
 </main>
-<footer class="blue darken-1 page-footer">
-  <div class="row">
-    <div class="col s12">
-      <p class="center white-text"> © 2017 <span class="accent">MedicType Team.</span></p>
-    </div>
-  </div>
-</footer>

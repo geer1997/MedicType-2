@@ -22,33 +22,34 @@
 
 module.exports.routes = {
 
-  /***************************************************************************
-  *                                                                          *
-  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-  * etc. depending on your default view engine) your home page.              *
-  *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
-  * `assets` directory)                                                      *
-  *                                                                          *
-  ***************************************************************************/
+  '/': { view: 'homepage' },
 
-  '/': {
-    view: 'homepage'
-  },
+  // 'GET /login-paciente' : 'PacienteController.Login',
 
-  /***************************************************************************
-  *                                                                          *
-  * Custom routes here...                                                    *
-  *                                                                          *
-  * If a request to a URL doesn't match any of the custom routes above, it   *
-  * is matched against Sails route blueprints. See `config/blueprints.js`    *
-  * for configuration options and examples.                                  *
-  *                                                                          *
-  ***************************************************************************/
-  'GET /login' : 'MedicoController.Login',
-  'POST /Consulta' : 'MedicoController.Home',
-  'POST /pacientes/registro' : 'PacienteController.registrar',
-  'GET /doctor/panel' : 'MedicoController.Atender',
-  'POST /Paciente/crear' : 'PacienteController.crear'
-  
+
+
+  'GET /medico-login': 'MedicoController.Login',
+  'GET /paciente-home': 'PacienteController.Home',
+
+  'GET /paciente/registrar': 'PacienteController.Registrar',
+  'POST /paciente/crear': 'PacienteController.Crear',
+  'POST /paciente/BuscarPorCedula': 'PacienteController.BuscarPorCedula',
+  'GET /paciente/modificar/:id': 'PacienteController.Modificar',
+  'POST /paciente/modificar/:id': 'PacienteController.Modificar',
+  'POST /paciente/eliminar': 'PacienteController.Eliminar',
+  'GET /paciente/update/:id': 'PacienteController.Update',
+  'POST /paciente/update/:id': 'PacienteController.Update',
+
+  'GET /doctor/panel': 'MedicoController.Consulta',
+  'POST /Consulta': 'MedicoController.Home',
+  'GET /medico/registrar': {view: 'registrar-medico'},
+  'POST /medico/crear': 'MedicoController.Registrar'
+  //'POST /Consulta' : 'MedicoController.Home',,
+  //'GET /doctor/panel' : 'MedicoController.Atender',
+
+
+
+
+
+
 };
