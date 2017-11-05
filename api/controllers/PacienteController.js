@@ -37,11 +37,10 @@ module.exports = {
     });
   },
 
-
   Modificar: function(req, res) {
     Paciente.findOne({id:req.params.id}).exec(function (err, paciente) {
       if (err) {
-        res.send(500,{error:'DB_Error'});
+        res.send(500,{error:err});
       }
       res.view('modificar-paciente', {Paciente:paciente});
     });
@@ -50,7 +49,7 @@ module.exports = {
   Eliminar: function(req, res) {
     Paciente.destroy({id:req.params.id}).exec(function (err) {
       if (err) {
-        res.send(500,{error:'DB_Error'});
+        res.send(500,{error:err});
       }
       res.redirect('/paciente-home');
     });
